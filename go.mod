@@ -1,4 +1,4 @@
-module simple-encrypt
+module github.com/lufishggg/simple-encrypt
 
 go 1.13
 
