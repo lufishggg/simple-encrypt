@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	se "simple-encrypt"
+	se "github.com/lufishggg/simple-encrypt"
 	"time"
 	"xorm.io/builder"
 )
