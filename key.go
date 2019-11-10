@@ -13,7 +13,7 @@ var keys map[string]*cipher.Block
 
 const DefaultKeyName = "default"
 
-func init()  {
+func init() {
 	keys = make(map[string]*cipher.Block, 0)
 }
 

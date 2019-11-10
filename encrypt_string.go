@@ -44,7 +44,7 @@ func (s *EncryptString) Scan(src interface{}) error {
 
 // Value encrypts the value and save in the database
 func (s EncryptString) Value() (driver.Value, error) {
-	if s.raw == nil{
+	if s.raw == nil {
 		return nil, nil
 	}
 	cipherTextString, err := encrypt(*s.raw, keys[s.keyName])
@@ -75,7 +75,7 @@ func NewEncryptString(raw *string) EncryptString {
 func NewEncryptStringWithKeyName(keyName string, raw *string) EncryptString {
 	return EncryptString{
 		keyName: keyName,
-		raw: raw,
+		raw:     raw,
 	}
 }
 

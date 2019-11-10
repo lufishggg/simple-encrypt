@@ -79,7 +79,7 @@ func (i *EncryptInt) Int() int {
 func NewEncryptInt(raw *int) EncryptInt {
 	return EncryptInt{
 		keyName: DefaultKeyName,
-		raw: raw,
+		raw:     raw,
 	}
 }
 
@@ -88,7 +88,7 @@ func NewEncryptInt(raw *int) EncryptInt {
 func NewEncryptIntWithKeyName(keyName string, raw *int) EncryptInt {
 	return EncryptInt{
 		keyName: keyName,
-		raw: raw,
+		raw:     raw,
 	}
 }
 

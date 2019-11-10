@@ -18,11 +18,11 @@ func encrypt(plainTextString string, block *cipher.Block) (string, error) {
 	// Get the plain text bytes from plain text string and padding it
 	plainTextBytes := []byte(plainTextString)
 	plainTextBytes = pkcs7Padding(plainTextBytes)
-	if len(plainTextBytes) % aes.BlockSize != 0 {
+	if len(plainTextBytes)%aes.BlockSize != 0 {
 		return "", errors.New("plaintext is not a multiple of the block size")
 	}
 	// Make the cipher text bytes
-	cipherTextBytes := make([]byte, aes.BlockSize + len(plainTextBytes))
+	cipherTextBytes := make([]byte, aes.BlockSize+len(plainTextBytes))
 	// Random generate iv
 	iv := cipherTextBytes[:aes.BlockSize]
 	if _, err := io.ReadFull(rand.Reader, iv); err != nil {

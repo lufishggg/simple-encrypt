@@ -22,7 +22,7 @@ func decrypt(cipherTextString string, block *cipher.Block) (string, error) {
 	// Get the iv from cipher text
 	iv := cipherTextBytes[:aes.BlockSize]
 	cipherTextBytes = cipherTextBytes[aes.BlockSize:]
-	if len(cipherTextBytes) % aes.BlockSize != 0 {
+	if len(cipherTextBytes)%aes.BlockSize != 0 {
 		return "", errors.New("cipher text is not a multiple of the block size")
 	}
 	// Decrypt
