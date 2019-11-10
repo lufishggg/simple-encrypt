@@ -26,7 +26,7 @@ func TestInitKeys(t *testing.T) {
 }
 
 // TestEncryptAndDecrypt tests the correctness of the encrypt and decrypt function
-func TestEncryptAndDecrypt(t *testing.T)  {
+func TestEncryptAndDecrypt(t *testing.T) {
 	keyBytes, _ := hex.DecodeString("0123456789abcdef0123456789abcdef")
 	block, _ := aes.NewCipher(keyBytes)
 	plainTextString := "I am plain text"
