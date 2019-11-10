@@ -62,6 +62,16 @@ func (s *EncryptString) String() string {
 	return *s.raw
 }
 
+// SetKeyName sets the key
+func (s *EncryptString) SetKeyName(keyName string) {
+	s.keyName = keyName
+}
+
+// SetRaw sets the raw
+func (s *EncryptString) SetRaw(raw *string)  {
+	s.raw = raw
+}
+
 // NewEncryptString news a default EncryptString
 func NewEncryptString(raw *string) EncryptString {
 	return EncryptString{
