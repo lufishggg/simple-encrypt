@@ -74,6 +74,16 @@ func (i *EncryptInt) Int() int {
 	return *i.raw
 }
 
+// SetKeyName sets the key
+func (i *EncryptInt) SetKeyName(keyName string) {
+	i.keyName = keyName
+}
+
+// SetRaw sets the raw
+func (i *EncryptInt) SetRaw(raw *int)  {
+	i.raw = raw
+}
+
 // NewDefaultEncryptInt news an EncryptInt with default key name
 // you must only use NewDefaultEncryptInt or NewEncryptInt to new an EncryptInt
 func NewEncryptInt(raw *int) EncryptInt {
